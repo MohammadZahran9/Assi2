@@ -10,7 +10,10 @@ class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        elevation: 0.0,
+      ),
       body: Consumer<AAR>(builder: (context, val, child) {
         return ListView.builder(
           itemCount:val.cart.length,
@@ -24,7 +27,6 @@ class Cart extends StatelessWidget {
                 }, icon: Icon(Icons.remove)),
               ),
             );
-
         });
       },),
     );

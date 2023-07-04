@@ -100,7 +100,7 @@ class bar extends StatelessWidget {
                                       padding:
                                           const EdgeInsets.only(right: 60),
                                       child: Text(
-                                        "SAR ${ll[i].tableMenuList[1].categoryDishes[k].dishPrice} ",
+                                        "SAR ${ll[i].tableMenuList[1].categoryDishes[k].dishPrice}",
                                         style: const TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold),
