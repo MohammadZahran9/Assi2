@@ -1,3 +1,5 @@
+import 'package:assignment_2/controllers/addAndRemove.dart';
+import 'package:assignment_2/views/cart.dart';
 import 'package:assignment_2/views/tabview/biryani.dart';
 import 'package:assignment_2/views/tabview/fastfood.dart';
 import 'package:assignment_2/views/tabview/fromTheBarnyard.dart';
@@ -6,6 +8,7 @@ import 'package:assignment_2/views/tabview/fromTheSea.dart';
 import 'package:assignment_2/views/tabview/saladsandSoup.dart';
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:provider/provider.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -22,10 +25,19 @@ class Home extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: badges.Badge(
-                    badgeContent: const Text("0"),
-                    child: Icon(
-                      Icons.shopping_cart,
-                      color: Colors.grey[600],
+                    badgeContent: Consumer<AAR>(builder: (context, value, child) {
+                      return Text(value.count.toString());
+                    },),
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                          return Cart();
+                        }));
+                      },
+                      child: Icon(
+                        Icons.shopping_cart,
+                        color: Colors.grey[600],
+                      ),
                     )),
               )
             ],

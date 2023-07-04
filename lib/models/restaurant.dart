@@ -1,5 +1,3 @@
-// ignore: depend_on_referenced_packages
-//import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Restaurant> restaurantFromJson(String str) => List<Restaurant>.from(json.decode(str).map((x) => Restaurant.fromJson(x)));
