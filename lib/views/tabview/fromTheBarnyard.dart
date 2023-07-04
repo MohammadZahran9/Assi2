@@ -171,7 +171,6 @@ class bar extends StatelessWidget {
                                                 GestureDetector(
                                                   onTap: () {
                                                     value.add(ll[i]);
-
                                                   },
                                                   child: Icon(
                                                     Icons.add,
