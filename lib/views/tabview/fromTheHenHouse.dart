@@ -1,4 +1,3 @@
-
 import 'package:assignment_2/models/restaurant.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +36,7 @@ class HenHouse extends StatelessWidget {
 }
 
 class Hen extends StatelessWidget {
-   Hen({super.key, required this.ll});
+  Hen({super.key, required this.ll});
 
   final List<Restaurant> ll;
 
@@ -152,7 +151,8 @@ class Hen extends StatelessWidget {
                                                   right: 7, left: 9),
                                               child: Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment.spaceBetween,
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
                                                 children: [
                                                   Icon(
                                                     Icons.remove,
@@ -197,4 +197,3 @@ class Hen extends StatelessWidget {
         });
   }
 }
-
