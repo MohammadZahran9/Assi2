@@ -1,8 +1,6 @@
 import 'package:assignment_2/models/restaurant.dart';
 import 'package:flutter/material.dart';
 
-
-
 class AAR extends ChangeNotifier{
   double _count = 0;
 List<Restaurant> hh = [];

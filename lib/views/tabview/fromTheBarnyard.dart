@@ -155,7 +155,6 @@ class bar extends StatelessWidget {
                                                 GestureDetector(
                                                   onTap: () {
                                                     value.remove(value.cart[i]);
-                                             
                                                   },
                                                   child: Icon(
                                                     Icons.remove,
