@@ -192,10 +192,3 @@ class EnumValues<T> {
         return reverseMap;
     }
 }
-
-class item {
-  String title;
-  int count;
-
-  item({required this.title,required this.count});
-}

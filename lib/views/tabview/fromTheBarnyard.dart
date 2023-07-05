@@ -135,7 +135,7 @@ class bar extends StatelessWidget {
                                         )
                                       ],
                                     ),
-                                    Padding(padding: EdgeInsets.all(3)),
+                                    const Padding(padding: EdgeInsets.all(3)),
                                     Row(
                                       children: [
                                         Container(
@@ -151,19 +151,19 @@ class bar extends StatelessWidget {
                                             child: Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.spaceBetween,
-                                              children: [
+                                              children:[
                                                 GestureDetector(
                                                   onTap: () {
                                                     value.remove(value.cart[i]);
                                                   },
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     Icons.remove,
                                                     color: Colors.white,
                                                   ),
                                                 ),
                                                 Text(
                                                   value.count.toString(),
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 15),
                                                 ),
@@ -171,7 +171,7 @@ class bar extends StatelessWidget {
                                                   onTap: () {
                                                     value.add(ll[i]);
                                                   },
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     Icons.add,
                                                     color: Colors.white,
                                                   ),
@@ -195,9 +195,9 @@ class bar extends StatelessWidget {
                             fit: BoxFit.fill,
                             progressIndicatorBuilder:
                                 (context, url, progress) =>
-                                    CircularProgressIndicator(),
+                                    const CircularProgressIndicator(),
                             errorWidget: (context, url, error) =>
-                                Icon(Icons.error),
+                                const Icon(Icons.error),
                           ),
                         );
                         },)));
