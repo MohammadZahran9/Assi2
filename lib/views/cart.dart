@@ -15,19 +15,29 @@ class Cart extends StatelessWidget {
         elevation: 0.0,
       ),
       body: Consumer<AAR>(builder: (context, val, child) {
-        return ListView.builder(
-          itemCount:val.cart.length,
-          itemBuilder: (context,i){
-            return Card(
-              child: ListTile(
-                title: Text(val.cart[i].tableMenuList[1].categoryDishes[i].dishName.toString()),
-                subtitle: Text("SAR ${val.cart[i].tableMenuList[1].categoryDishes[i].dishPrice}"),
-                trailing: IconButton(onPressed: (){
-                  val.remove(val.cart[i]);
-                }, icon: Icon(Icons.remove)),
-              ),
-            );
-        });
+        return Column(
+          children: [
+            SizedBox(
+              width: double.infinity,
+              height: 500,
+              child: ListView.builder(
+                itemCount:val.cart.length,
+                itemBuilder: (context,i){
+                  return Card(
+                    child: ListTile(
+                      title:Text(val.cart[i].tableMenuList[1].categoryDishes[i].dishName.toString()),
+                      subtitle: Text("SAR ${val.cart[i].tableMenuList[1].categoryDishes[i].dishPrice}"),
+                      trailing: IconButton(onPressed: (){
+                        val.remove(val.cart[i] , i);
+                      }, icon: const Icon(Icons.remove)),
+                    ),
+                  );
+              }),
+            ),
+
+            Text("total : ${val.total}"),
+          ],
+        );
       },),
     );
   }

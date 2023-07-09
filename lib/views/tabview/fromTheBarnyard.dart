@@ -165,8 +165,7 @@ class bar extends StatelessWidget {
                                                       children: [
                                                         GestureDetector(
                                                           onTap: () {
-                                                            value.remove(
-                                                                value.cart[i]);
+                                                            value.remove(ll[i], k);
                                                           },
                                                           child: const Icon(
                                                             Icons.remove,
@@ -184,7 +183,7 @@ class bar extends StatelessWidget {
                                                         ),
                                                         GestureDetector(
                                                           onTap: () {
-                                                            value.add(ll[i]);
+                                                            value.add(ll[i] , k);
                                                           },
                                                           child: const Icon(
                                                             Icons.add,

@@ -2,17 +2,20 @@ import 'package:assignment_2/models/restaurant.dart';
 import 'package:flutter/material.dart';
 
 class AAR extends ChangeNotifier {
+  int g = 0 ;
   double _count = 0;
   List<Restaurant> hh = [];
-  void add(Restaurant i) {
+
+  void add(Restaurant i , int index) {
     hh.add(i);
-    _count += i.tableMenuList[1].categoryDishes[0].dishPrice;
+    g +=count;
+    _count += i.tableMenuList[1].categoryDishes[index].dishPrice;
     notifyListeners();
   }
 
-  void remove(Restaurant i) {
+  void remove(Restaurant i, int h) {
     hh.remove(i);
-    _count -= i.tableMenuList[1].categoryDishes[0].dishPrice;
+    _count -= i.tableMenuList[1].categoryDishes[h].dishPrice;
     notifyListeners();
   }
 
